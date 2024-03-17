@@ -83,7 +83,7 @@ func TestHandler_withProblemError(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	want := `{"detail":"problem error","status":418,"title":"I'm a teapot","type":"https://httpstatuses.com/418"}`
+	want := `{"detail":"problem error","status":418,"title":"I'm a teapot","type":"https://httpstatuscodes.org/418"}`
 	if strings.TrimSpace(string(body)) != want {
 		t.Errorf("expected body %q, got %q", want, body)
 	}

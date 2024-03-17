@@ -13,8 +13,8 @@ import (
 func TestProblem_newWithDefaults(t *testing.T) {
 	problem := problem.New(errors.New("problem error"), 418)
 
-	if problem.Type != "https://httpstatuses.com/418" {
-		t.Errorf("problem.Type = %s; want https://httpstatuses.com/418", problem.Type)
+	if problem.Type != "https://httpstatuscodes.org/418" {
+		t.Errorf("problem.Type = %s; want https://httpstatuscodes.org/418", problem.Type)
 	}
 
 	if problem.Title != "I'm a teapot" {

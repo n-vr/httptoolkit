@@ -7,6 +7,10 @@ import (
 	"net/http"
 )
 
+var (
+	defaultTypeURIPrefix = "https://httpstatuscodes.org/"
+)
+
 // Type represents a problem type.
 type Type struct {
 	typeURI string
@@ -65,7 +69,7 @@ func WithExtension(key string, value any) option {
 // The status code should be a valid HTTP status code.
 func New(err error, status int, opts ...option) *Problem {
 	problem := &Problem{
-		Type:   fmt.Sprintf("https://httpstatuses.com/%d", status),
+		Type:   fmt.Sprintf("%s%d", defaultTypeURIPrefix, status),
 		Title:  http.StatusText(status),
 		Status: status,
 		Detail: err.Error(),
