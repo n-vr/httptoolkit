@@ -2,8 +2,6 @@ package handler
 
 import (
 	"net/http"
-
-	"github.com/n-vr/httptoolkit/problem"
 )
 
 // Error is an error that also contains a status code.
@@ -38,12 +36,12 @@ var ErrorHandler ErrorHandlerFunc = defaultErrorHandler
 
 // Default error handler.
 // If the error is an *Error, it will respond as plain text with the status code set.
-// Otherwise, it will use problem.HTTPErrorHandler.
+// Otherwise, it will return internal server error.
 func defaultErrorHandler(err error, w http.ResponseWriter) {
 	if e, ok := err.(*Error); ok {
 		http.Error(w, http.StatusText(e.StatusCode), e.StatusCode)
 		return
 	}
 
-	problem.HTTPErrorHandler(err, w)
+	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }
