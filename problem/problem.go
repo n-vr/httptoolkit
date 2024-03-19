@@ -104,7 +104,7 @@ func (p *Problem) MarshalJSON() ([]byte, error) {
 	return json.Marshal(problem)
 }
 
-func HTTPErrorHandler(err error, w http.ResponseWriter) {
+func ErrorHandler(err error, w http.ResponseWriter) {
 	problem, ok := err.(*Problem)
 	if !ok {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)

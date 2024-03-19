@@ -60,7 +60,7 @@ func TestProblem_newWithExtension(t *testing.T) {
 	}
 
 	recorder := httptest.NewRecorder()
-	problem.HTTPErrorHandler(p, recorder)
+	problem.ErrorHandler(p, recorder)
 	response := recorder.Result()
 
 	if response.StatusCode != 404 {
