@@ -1,5 +1,7 @@
 # HTTP Toolkit
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/n-vr/httptoolkit)](https://goreportcard.com/report/github.com/n-vr/httptoolkit)
+
 This is a toolkit to reduce boilerplate code for common HTTP related things I need to do in go.
 
 ## Subpackages
