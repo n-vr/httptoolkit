@@ -1,5 +1,7 @@
 # github.com/n-vr/httptoolkit/server
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/n-vr/httptoolkit/server.svg)](https://pkg.go.dev/github.com/n-vr/httptoolkit/server)
+
 This package can be used to start an HTTP server that will gracefully shutdown when a context is canceled.
 
 ## Example

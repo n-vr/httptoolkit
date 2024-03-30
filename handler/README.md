@@ -1,5 +1,7 @@
 # github.com/n-vr/httptoolkit/handler
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/n-vr/httptoolkit/handler.svg)](https://pkg.go.dev/github.com/n-vr/httptoolkit/handler)
+
 This package can be used to create HTTP handlers that can return errors.
 
 It exposes an error handler function (`handler.ErrorHandler`) that you can replace assign another function to.

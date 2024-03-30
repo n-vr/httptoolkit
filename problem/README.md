@@ -1,5 +1,7 @@
 # github.com/n-vr/httptoolkit/problem
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/n-vr/httptoolkit/problem.svg)](https://pkg.go.dev/github.com/n-vr/httptoolkit/problem)
+
 This package can be used in addition to the `github.com/n-vr/httptoolkit/handler` package to return a response according to the poblem details format (RFC 9457).
 
 ## Example
