@@ -11,3 +11,7 @@ Package handler implements an HTTP handler that can return an error, while stayi
 ### `github.com/n-vr/httptoolkit/problem`
 
 Package problem implements RFC 9457 errors that can be returned from a handler.
+
+### `github.com/n-vr/httptoolkit/server`
+
+Package server implements a simple HTTP server that features graceful shutdown.
