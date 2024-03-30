@@ -6,7 +6,7 @@ import (
 
 // Error is an error that also contains a status code.
 // It implements the error interface and can be returned from a Handler.
-// In conjuction with the default error handler,
+// In conjunction with the default error handler,
 // it will respond as plain text to the client with the status code set.
 type Error struct {
 	Err        error
